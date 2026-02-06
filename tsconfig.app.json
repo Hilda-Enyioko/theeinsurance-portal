@@ -16,16 +16,20 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": false,
+    "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
 
+    "forceConsistentCasingInFileNames": true,
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src"]
 }

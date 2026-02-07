@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { plansApi, categoriesApi } from '@/lib/api';
+import { plansApi, categoriesApi } from '@/api/client';
 import { InsurancePlan, PropertyCategory, PaginatedResponse } from '@/types';
 import { useToast } from '@/hooks/use-toast';
 import { Plus, Pencil, Trash2, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';

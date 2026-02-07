@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-@layer base {
-  :root {
+:root {
     /* TheeInsurance Portal - Soft Blue & White Theme */
     --background: 210 50% 98%;
     --foreground: 210 40% 15%;
@@ -116,7 +115,6 @@
     --sidebar-border: 210 30% 22%;
     --sidebar-ring: 201 79% 50%;
   }
-}
 
 @layer base {
   /* Global element styles */

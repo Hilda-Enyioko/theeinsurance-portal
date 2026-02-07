@@ -3,7 +3,7 @@
  import { MainLayout } from '@/components/layouts/MainLayout';
  import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
  import { Button } from '@/components/ui/button';
- import { plansApi } from '@/lib/api';
+ import { plansApi } from '@/api/client';
  import { InsurancePlan } from '@/types';
  import { useAuth } from '@/contexts/AuthContext';
  import { ArrowLeft, Clock, Shield, Check, Loader2 } from 'lucide-react';
@@ -111,7 +111,7 @@
                  <div className="grid sm:grid-cols-2 gap-4">
                    {planFeatures.map((feature) => (
                      <div key={feature} className="flex items-center gap-3">
-                       <div className="w-5 h-5 rounded-full bg-success/20 flex items-center justify-center flex-shrink-0">
+                       <div className="w-5 h-5 rounded-full bg-success/20 flex items-center justify-center shrink-0">
                          <Check className="w-3 h-3 text-success" />
                        </div>
                        <span className="text-foreground">{feature}</span>

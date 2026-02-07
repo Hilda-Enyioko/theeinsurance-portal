@@ -103,7 +103,7 @@
                <Card 
                  key={category.name} 
                  className="group hover:shadow-brand-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary/20 animate-slide-up"
-                 style={{ animationDelay: `${index * 100}ms` }}
+                 style={{ "--animation-delay": `${index * 100}ms` } as React.CSSProperties}
                >
                  <CardHeader className="text-center">
                    <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -135,7 +135,7 @@
                <Card 
                  key={feature.title} 
                  className="text-center animate-slide-up"
-                 style={{ animationDelay: `${index * 100}ms` }}
+                 style={{ "--animation-delay": `${index * 100}ms` } as React.CSSProperties}
                >
                  <CardHeader>
                    <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mx-auto mb-3">
@@ -169,9 +169,9 @@
                  <div 
                    key={benefit} 
                    className="flex items-center gap-3 p-4 bg-card rounded-lg shadow-brand-sm animate-scale-in"
-                   style={{ animationDelay: `${index * 50}ms` }}
+                   style={{ "--animation-delay": `${index * 50}ms` } as React.CSSProperties}
                  >
-                   <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
+                   <CheckCircle2 className="w-5 h-5 text-success shrink-0" />
                    <span className="text-foreground font-medium">{benefit}</span>
                  </div>
                ))}

@@ -5,7 +5,7 @@
  import { Button } from '@/components/ui/button';
  import { Input } from '@/components/ui/input';
  import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
- import { plansApi, categoriesApi } from '@/lib/api';
+ import { plansApi, categoriesApi } from '@/api/client';
  import { InsurancePlan, PropertyCategory, PaginatedResponse } from '@/types';
  import { Search, Filter, Clock, ArrowRight, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
  

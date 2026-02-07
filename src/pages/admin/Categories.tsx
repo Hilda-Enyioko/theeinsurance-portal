@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { categoriesApi } from '@/lib/api';
+import { categoriesApi } from '@/api/client';
 import { PropertyCategory } from '@/types';
 import { useToast } from '@/hooks/use-toast';
 import { Plus, Pencil, Trash2, Loader2 } from 'lucide-react';

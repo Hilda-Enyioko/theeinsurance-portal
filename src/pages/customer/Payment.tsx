@@ -5,7 +5,7 @@
  import { Button } from '@/components/ui/button';
  import { Input } from '@/components/ui/input';
  import { Label } from '@/components/ui/label';
- import { subscriptionsApi } from '@/lib/api';
+ import { subscriptionsApi } from '@/api/client';
  import { useToast } from '@/hooks/use-toast';
  import { CreditCard, Lock, CheckCircle2, Loader2, ArrowLeft } from 'lucide-react';
  

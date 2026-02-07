@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AdminLayout } from '@/components/layouts/AdminLayout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { categoriesApi, plansApi, subscriptionsApi } from '@/lib/api';
+import { categoriesApi, plansApi, subscriptionsApi } from '@/api/client';
 import { FolderTree, FileText, Users, TrendingUp, Loader2 } from 'lucide-react';
  
 export default function AdminDashboard() {

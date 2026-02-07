@@ -5,7 +5,7 @@
  import { Button } from '@/components/ui/button';
  import { Input } from '@/components/ui/input';
  import { Label } from '@/components/ui/label';
- import { plansApi } from '@/lib/api';
+ import { plansApi } from '@/api/client';
  import { InsurancePlan } from '@/types';
  import { useToast } from '@/hooks/use-toast';
  import { ArrowLeft, ArrowRight, Loader2, Calendar, Shield, Check } from 'lucide-react';
@@ -195,7 +195,7 @@
                  <div className="space-y-4">
                    <div className="p-4 rounded-lg border space-y-4">
                      <div className="flex items-start gap-4">
-                       <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
+                       <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
                          <Shield className="w-6 h-6 text-primary-foreground" />
                        </div>
                        <div>

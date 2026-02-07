@@ -4,7 +4,7 @@
  import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
  import { Button } from '@/components/ui/button';
  import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
- import { subscriptionsApi } from '@/lib/api';
+ import { subscriptionsApi } from '@/api/client';
  import { PolicySubscription } from '@/types';
  import { Loader2, Calendar, Shield, FileText } from 'lucide-react';
  import { format } from 'date-fns';

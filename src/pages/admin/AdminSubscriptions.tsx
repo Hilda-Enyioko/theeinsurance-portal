@@ -3,7 +3,7 @@ import { AdminLayout } from '@/components/layouts/AdminLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { subscriptionsApi } from '@/lib/api';
+import { subscriptionsApi } from '@/api/client';
 import { PolicySubscription, PaginatedResponse } from '@/types';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';

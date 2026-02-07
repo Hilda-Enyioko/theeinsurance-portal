@@ -4,7 +4,7 @@
  import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
  import { Button } from '@/components/ui/button';
  import { useAuth } from '@/contexts/AuthContext';
- import { subscriptionsApi, plansApi } from '@/lib/api';
+ import { subscriptionsApi, plansApi } from '@/api/client';
  import { PolicySubscription, InsurancePlan } from '@/types';
  import { FileText, Shield, ArrowRight, Calendar, Clock, Loader2 } from 'lucide-react';
  import { format } from 'date-fns';

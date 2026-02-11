@@ -42,7 +42,7 @@
      const result = registerSchema.safeParse({ firstName, lastName, email, password, confirmPassword });
      if (!result.success) {
        const fieldErrors: Record<string, string> = {};
-       result.error.errors.forEach((err) => {
+       result.error.issues.forEach((err) => {
          const field = err.path[0] as string;
          fieldErrors[field] = err.message;
        });

@@ -65,7 +65,7 @@
      api.post('/auth/login/', { email, password }),
    
    adminLogin: (email: string, password: string) =>
-     api.post('/auth/admin/login/', { email, password }),
+     api.post('/auth/login/', { email, password }),
    
    register: (data: { email: string; password: string; first_name?: string; last_name?: string }) =>
      api.post('/auth/register/', data),

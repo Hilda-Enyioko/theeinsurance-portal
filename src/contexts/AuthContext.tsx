@@ -56,7 +56,12 @@
  
    const adminLogin = useCallback(async (email: string, password: string) => {
      const response = await authApi.adminLogin(email, password);
-     const { access, refresh, user: userData } = response.data;
+     const { access, refresh, role, ...userData } = response.data;
+
+     // Critical enforcement
+     if (role != 'admin') {
+      throw new Error('Access denied. Not an administrator.');
+     }
      
      localStorage.setItem('access_token', access);
      localStorage.setItem('refresh_token', refresh);

@@ -49,6 +49,10 @@
        setErrors(fieldErrors);
        return;
      }
+
+     // Derive a unique username from the email (part before @)
+     // e.g. "john.doe@example.com" → "john.doe"
+     const username = email.split('@')[0];
  
      setIsLoading(true);
      try {
@@ -57,6 +61,8 @@
          password,
          first_name: firstName,
          last_name: lastName,
+         username,
+         role: 'user', // Default role for new registrations
        });
        toast({
          title: 'Account Created!',
@@ -64,13 +70,28 @@
        });
        navigate('/dashboard', { replace: true });
      } catch (error: unknown) {
-       const apiError = error as { response?: { data?: { detail?: string; message?: string; email?: string[] } } };
+       const apiError = error as { 
+        response?: { 
+          data?: { 
+            detail?: string; 
+            message?: string; 
+            email?: string[];
+            username?: string[];
+            non_field_errors?: string[];
+          };
+        };
+        };
        let message = 'Registration failed. Please try again.';
        
        if (apiError.response?.data?.email) {
          message = 'An account with this email already exists.';
+       } else if (apiError.response?.data?.username) {
+        // Username derived from email was already taken — append a short suffix
+        message = 'Username conflict. Please try a slightly different email or contact support.';
        } else if (apiError.response?.data?.detail) {
          message = apiError.response.data.detail;
+       } else if (apiError.response?.data?.non_field_errors) {
+        message = apiError.response.data.non_field_errors[0];
        } else if (apiError.response?.data?.message) {
          message = apiError.response.data.message;
        }
